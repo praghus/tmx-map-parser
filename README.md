@@ -1,7 +1,19 @@
-# tmx-tiledmap
+# tmx-tiledmap [![npm version](https://badge.fury.io/js/tmx-tiledmap.svg)](//npmjs.com/package/tmx-tiledmap)
 
-TMX - Tiled map parser.
+Parser for [Tiled Map Editor](http://www.mapeditor.org/) maps.
 
-### License
+## Installation
+
+```sh
+npm install tmx-tiledmap
+```
+
+or using yarn
+
+```sh
+yarn add tmx-tiledmap
+```
+
+## License
 
 [MIT licensed](./LICENSE).
