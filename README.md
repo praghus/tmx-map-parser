@@ -1,4 +1,4 @@
-# tmx-tiledmap [![npm version](https://badge.fury.io/js/tmx-tiledmap.svg)](//npmjs.com/package/tmx-tiledmap)
+# tmx-tiledmap [![npm version](https://badge.fury.io/js/tmx-tiledmap.svg)](//npmjs.com/package/tmx-tiledmap) [![Build Status](https://travis-ci.org/praghus/tmx-tiledmap.svg?branch=master)](https://travis-ci.org/praghus/tmx-tiledmap)
 
 Parser for [Tiled Map Editor](http://www.mapeditor.org/) maps for use with [Webpack](https://webpack.js.org/).
 
@@ -19,7 +19,7 @@ yarn add tmx-tiledmap
 You can import and parse tiled map like this:
 
 ```js
-// TMX file loaded using webpack 'url-loader' (can be either a string or URL encoded data)
+// TMX file loaded using webpack 'url-loader' (can be either a string or URL encoded data).
 import tmxFile from './levels/map.tmx'
 import { tmxParser } from 'tmx-tiledmap'
 
