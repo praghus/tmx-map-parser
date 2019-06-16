@@ -1,0 +1,64 @@
+{
+  "name": "tmx-tiledmap",
+  "version": "1.0.0",
+  "description": "TMX - Tiled map parser.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "cross-env BABEL_ENV=commonjs babel lib --out-dir dist",
+    "lint": "eslint lib",
+    "test": "mocha --require babel-core/register --require babel-polyfill --recursive",
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build"
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praghus/tmx-platformer-lib.git"
+  },
+  "keywords": [
+    "tmx",
+    "platformer",
+    "game",
+    "npm",
+    "module",
+    "node",
+    "javascript"
+  ],
+  "author": "Piotr Praga <praghus@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/praghus",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-plugin-syntax-decorators": "^6.13.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.14.0",
+    "babel-runtime": "^6.25.0",
+    "chai": "^4.2.0",
+    "cross-env": "^5.1.3",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-mocha": "^5.2.0",
+    "eslint-plugin-react": "^7.6.1",
+    "eslint-watch": "^3.1",
+    "mocha": "^6.1.4",
+    "moment": "^2.24.0",
+    "rimraf": "^2.6.2",
+    "xml2js": "^0.4.19",
+    "zlib": "^1.0.5"
+  }
+}
