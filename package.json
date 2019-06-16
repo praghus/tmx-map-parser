@@ -1,6 +1,6 @@
 {
   "name": "tmx-tiledmap",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "TMX - Tiled map parser.",
   "main": "./dist/index.js",
   "scripts": {
