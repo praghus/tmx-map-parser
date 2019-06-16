@@ -58,6 +58,21 @@ Example parsed data
 
 ```js
 {
+    tiledversion: "1.2.4"
+    tilewidth: 16,
+    tileheight: 16,
+    version: 1.2,
+    width: 512,
+    height: 128,
+    infinite: 0,
+    nextlayerid: 5,
+    nextobjectid: 165,
+    orientation: "orthogonal",
+    renderorder: "right-down",
+    properties: {
+        property1: 'value', 
+        property2: 0.5
+    },
     layers: [{
         id: 1,
         name: "layer name",
@@ -101,22 +116,7 @@ Example parsed data
         tiles: [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
     }, {
         …
-    }],
-    renderorder: "right-down",
-    tiledversion: "1.2.4"
-    tilewidth: 16,
-    tileheight: 16,
-    version: 1.2,
-    width: 512,
-    height: 128,
-    infinite: 0,
-    nextlayerid: 5,
-    nextobjectid: 165,
-    orientation: "orthogonal",
-    properties: {
-        property1: 'value', 
-        property2: 0.5
-    }
+    }]
 }
 ```
 
