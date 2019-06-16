@@ -1,12 +1,12 @@
 import { expect } from 'chai'
-import { Tmx } from '../lib'
+import { tmxParser } from '../lib'
 import tmxFile from './data/map'
 
 let map
 
 describe('Testing', () => {
     before(async () => {
-        map = await Tmx(tmxFile) 
+        map = await tmxParser(tmxFile) 
     })
 
     it('Should parse tmx file', () => {

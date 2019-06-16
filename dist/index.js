@@ -4,11 +4,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _tmx = require('./tmx');
+var _tmxParser = require('./tmx-parser');
 
-Object.defineProperty(exports, 'Tmx', {
+Object.defineProperty(exports, 'tmxParser', {
   enumerable: true,
   get: function get() {
-    return _tmx.Tmx;
+    return _tmxParser.tmxParser;
   }
 });
