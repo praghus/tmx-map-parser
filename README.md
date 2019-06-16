@@ -19,8 +19,7 @@ yarn add tmx-tiledmap
 You can import and parse tiled map like this:
 
 ```js
-// TMX file loaded using webpack 'url-loader',
-// can be either a string or URL encoded data.
+// TMX file loaded using webpack 'url-loader' (can be either a string or URL encoded data).
 import tmxFile from './levels/map.tmx'
 import { tmxParser } from 'tmx-tiledmap'
 
