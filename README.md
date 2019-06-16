@@ -40,13 +40,13 @@ module.exports = {
     ],
     module: {
         rules: [
-            …,
+            // ...
             {
                 test: /\.tmx$/,
                 include: path.join(process.cwd(), 'src/assets/levels'),
                 use: 'url-loader'
             },
-            …
+           // ...
         ]
     }
 }
