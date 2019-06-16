@@ -58,7 +58,7 @@ Example parsed data
 
 ```js
 {
-    tiledversion: "1.2.4"
+    tiledversion: "1.2.4",
     tilewidth: 16,
     tileheight: 16,
     version: 1.2,
@@ -76,7 +76,7 @@ Example parsed data
     layers: [{
         id: 1,
         name: "layer name",
-        type: "layer"
+        type: "layer",
         visible: 1,
         data: [0, 1, 1, 10, 10, 10, 1, 1, 0, 0, 0, 0, …],
         flips: [
@@ -104,7 +104,7 @@ Example parsed data
         }
     }, {
         …
-    }]
+    }],
     tilesets: [{
         columns: 32,
         firstgid: 1,
