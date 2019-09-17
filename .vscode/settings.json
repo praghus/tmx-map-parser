@@ -1,0 +1,9 @@
+{
+    "eslint.options": {
+        "configFile": ".eslintrc.js" 
+    }, 
+    "eslint.autoFixOnSave": true,
+    "typescript.tsdk": "node_modules/typescript/lib"
+    // "typescript.implementationsCodeLens.enabled": true
+    // "typescript.referencesCodeLens.enabled": true
+}

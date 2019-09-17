@@ -1,6 +1,11 @@
-.idea
-.vscode
 node_modules
-logs
+build
+test
+src/**.js
+.idea/*
+
+coverage
+.nyc_output
 *.log
-npm-debug.log*
+
+package-lock.json
