@@ -9,15 +9,7 @@
         "type": "git",
         "url": "git+https://github.com/praghus/tmx-tiledmap.git"
     },
-    "keywords": [
-        "tmx",
-        "tiledmap",
-        "game",
-        "npm",
-        "module",
-        "node",
-        "javascript"
-    ],
+    "keywords": ["tmx", "tiledmap", "parser"],
     "license": "MIT",
     "scripts": {
         "describe": "npm-scripts-info",
