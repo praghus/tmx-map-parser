@@ -1,4 +1,3 @@
-import fetch from 'node-fetch'
 import zlib from 'zlib'
 import { parseString } from 'xml2js'
 import { COMPRESSION, ENCODING } from './constants'
