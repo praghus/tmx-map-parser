@@ -37,8 +37,6 @@ export const Tmx = async (xmlString: string): Promise<Record<string, any>> => {
             }
         })
     )
-
     map.layers = Object.values(map.layers)
-    console.info('MAP', map)
     return map
 }
