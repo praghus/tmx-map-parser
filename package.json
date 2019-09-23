@@ -1,6 +1,6 @@
 {
     "name": "tmx-tiledmap",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "description": "Parser for Tiled map editor *.tmx files.",
     "main": "build/main/index.js",
     "typings": "build/main/index.d.ts",
