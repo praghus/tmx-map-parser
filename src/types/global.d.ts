@@ -16,7 +16,7 @@ interface TmxMap {
     readonly infinite: number;
     layers: Array<TmxLayer>;
     readonly nextlayerid: number;
-    readonly nextobjectid: 1104;
+    readonly nextobjectid: number;
     readonly orientation: string;
     properties: Record<string, any>;
     readonly renderorder: string;
@@ -41,21 +41,8 @@ interface TmxTileset {
     readonly tilewidth: number;
 }
 
-interface TmxObject {
-    readonly $: any;
-    readonly text?: any;
-    readonly properties?: any;
-    readonly point?: any;
-    readonly ellipse?: any;
-    readonly polygon?: any;
-}
-
 interface TmxImage {
     readonly height: number;
     readonly width: number;
     readonly source: string;
 }
-// Map
-// layer
-// tileset
-// object
