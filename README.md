@@ -1,4 +1,4 @@
-# tmx-map-parser [![npm version](https://badge.fury.io/js/tmx-tiledmap.svg)](//npmjs.com/package/tmx-tiledmap) [![Build Status](https://travis-ci.org/praghus/tmx-tiledmap.svg?branch=master)](https://travis-ci.org/praghus/tmx-tiledmap)
+# tmx-tiledmap [![npm version](https://badge.fury.io/js/tmx-tiledmap.svg)](//npmjs.com/package/tmx-tiledmap) [![Build Status](https://travis-ci.org/praghus/tmx-tiledmap.svg?branch=master)](https://travis-ci.org/praghus/tmx-tiledmap)
 
 Parser for [Tiled Map Editor](http://www.mapeditor.org/) *.tmx files.
 
