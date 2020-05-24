@@ -1,5 +1,5 @@
 import test from 'ava'
-import { tmx } from '../tmx'
+import { tmx } from '../index'
 
 const tmxFileDataUrl = `<?xml version="1.0" encoding="UTF-8"?>
 <map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="4" height="4" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">

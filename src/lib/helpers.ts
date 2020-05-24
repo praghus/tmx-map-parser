@@ -1,3 +1,4 @@
+import * as Tmx from 'tmx-tiledmap'
 import { FLIPPED, SHAPE } from './constants'
 
 export const noop = Function.prototype
@@ -26,9 +27,19 @@ export const unpackTileBytes = (buf: Buffer, expectedCount: number): Array<numbe
     return unpackedTiles
 }
 
-export const getAttributes = ($: StringTMap<any>): Array<Record<string, any>> =>
+export const getAttributes = ($: Tmx.StringTMap<any>): Array<Record<string, any>> =>
     $ && Object.entries($).map(([key, value]) => ({ [key]: value }))
 
+export const getProperties = (properties: Array<Record<string, any>>) => ({
+    properties: properties && Object.assign({},
+        ...properties.map(({ property }) => Object.assign({},
+            ...property.map(({ $: { name, value }, _ }) => ({
+                [name]: value || _
+            }))
+        ))
+    ) || null
+})
+    
 export const getFlips = (gid: number) => ({
     H: !!(gid & FLIPPED.HORIZONTALLY),
     V: !!(gid & FLIPPED.VERTICALLY),
@@ -42,7 +53,7 @@ export const getTileId = (gid: number): number => (
         FLIPPED.DIAGONALLY
     ))
 
-export const getObjectShape = (data: StringTMap<any>) =>
+export const getObjectShape = (data: Tmx.StringTMap<any>) =>
     (data.point && SHAPE.POINT) ||
     (data.ellipse && SHAPE.ELLIPSE) ||
     (data.polygon && SHAPE.POLYGON) ||

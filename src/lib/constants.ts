@@ -6,6 +6,7 @@ export enum SHAPE {
 }
 
 export enum NODE_TYPE {
+    GROUP = 'group',
     IMAGE_LAYER = 'imagelayer',
     LAYER = 'layer',
     OBJECT_GROUP = 'objectgroup',
