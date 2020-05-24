@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.8](https://github.com/praghus/tmx-tiledmap/compare/v1.1.7...v1.1.8) (2020-05-24)
+
+
+
 ### [1.1.7](https://github.com/praghus/tmx-tiledmap/compare/v1.1.6...v1.1.7) (2019-11-13)
 
 
