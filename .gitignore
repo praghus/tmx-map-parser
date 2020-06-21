@@ -1,8 +1,9 @@
+.idea
+.vscode
 node_modules
 build
 test
 src/**.js
-.idea/*
 
 coverage
 .nyc_output
