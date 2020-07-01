@@ -2,6 +2,7 @@
     "name": "tmx-tiledmap",
     "version": "1.2.0",
     "description": "Parser for Tiled map editor *.tmx files.",
+    "homepage": "https://praghus.github.io/tmx-tiledmap",
     "main": "build/main/index.js",
     "typings": "build/main/index.d.ts",
     "module": "build/module/index.js",
