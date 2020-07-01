@@ -41,7 +41,7 @@ module.exports = {
 }
 ```
 ### Important
-Parser only supports tilesets embed in the main map file. At the moment, external tilesets are not supported!
+Parser only supports embedded tilesets. At the moment, external tilesets are not supported!
 
 
 ## Documentation
