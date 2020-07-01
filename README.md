@@ -15,7 +15,7 @@ yarn add tmx-tiledmap
 ```
 ## Usage
 
-You can import and parse tmx like this:
+The basic implementation is as follows:
 
 ```js
 // TMX file loaded using webpack 'url-loader' (can be either a string or URL encoded data).
@@ -30,26 +30,19 @@ tmx(tmxFile).then((data) => {
 webpack.config.js
 
 ```js
-const path = require('path')
-
 module.exports = {
-    target: 'web',
-    entry: [
-        path.join(process.cwd(), 'src/index.js')
-    ],
     module: {
         rules: [
-            // ...
-            {
-                test: /\.tmx$/,
-                include: path.join(process.cwd(), 'src/assets/levels'),
-                use: 'url-loader'
-            },
-           // ...
+            test: /\.tmx$/,
+            include: path.join(process.cwd(), 'src/assets/levels'),
+            use: 'url-loader'
         ]
     }
 }
 ```
+### Important
+Parser only supports tilesets embed in the main map file. At the moment, external tilesets are not supported!
+
 
 ## Documentation
 
