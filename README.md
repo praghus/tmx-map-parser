@@ -15,7 +15,7 @@ yarn add tmx-tiledmap
 ```
 ## Usage
 
-The basic implementation is as follows:
+The basic implementation:
 
 ```js
 // TMX file loaded using webpack 'url-loader' (can be either a string or URL encoded data).
