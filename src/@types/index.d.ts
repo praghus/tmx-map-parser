@@ -26,6 +26,7 @@ declare module 'tmx-tiledmap' {
         readonly tilewidth: number;
         readonly version: number;
         readonly width: number;    
+        editorsettings?: Record<string, any>;
         layers: Array<Layer>;
         properties: Record<string, any>;
         tilesets: Array<Tileset>;

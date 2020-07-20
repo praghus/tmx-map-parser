@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import * as Tmx from 'tmx-tiledmap'
 import zlib from 'zlib'
 import { parseString } from 'xml2js'
@@ -26,6 +27,7 @@ export class TMXParser {
         layers: [] as Tmx.Layer[], 
         tilesets: [] as Tmx.Tileset[],
         backgroundcolor: null,
+        editorsettings: null,
         height: null,
         infinite: null,
         nextlayerid: null,
@@ -46,7 +48,7 @@ export class TMXParser {
 
     async parse (): Promise<Tmx.Data> {
         const { map: { $, $$ } } = await this.parseXMLString()
-        //@todo: move data to seperate class
+
         this.data = Object.assign({
             layers: [],
             tilesets: []
@@ -61,10 +63,18 @@ export class TMXParser {
                         ...node.$$.map(({ $: { name, value } }) => ({[name]: value}))
                     )
                     break
+                case NODE_TYPE.EDITOR_SETTINGS:
+                    this.data.editorsettings =  Object.assign({},
+                        ...node.$$.map((s: any) => ({[s['#name']]: s.$}))
+                    )
+                    break
                 case NODE_TYPE.TILESET:
                     this.data.tilesets.push(this.parseTileset(node))
                     break
-                default:
+                case NODE_TYPE.GROUP :
+                case NODE_TYPE.IMAGE_LAYER:
+                case NODE_TYPE.LAYER :
+                case NODE_TYPE.OBJECT_GROUP: 
                     this.data.layers[i] = await this.parseNode(node)
                     break 
                 }

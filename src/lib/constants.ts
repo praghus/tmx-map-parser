@@ -1,11 +1,11 @@
 export enum SHAPE {
-    POINT = 'point',
     ELLIPSE = 'ellipse',
+    POINT = 'point',
     POLYGON = 'polygon',
     RECTANGLE = 'rectangle'
 }
-
 export enum NODE_TYPE {
+    EDITOR_SETTINGS = 'editorsettings',
     GROUP = 'group',
     IMAGE_LAYER = 'imagelayer',
     LAYER = 'layer',
@@ -15,8 +15,8 @@ export enum NODE_TYPE {
 }
 
 export enum ENCODING {
-    CSV = 'csv',
-    BASE64 = 'base64'
+    BASE64 = 'base64',
+    CSV = 'csv'
 }
 
 export enum COMPRESSION {
@@ -25,7 +25,7 @@ export enum COMPRESSION {
 }
 
 export enum FLIPPED {
+    DIAGONALLY = 0x20000000,
     HORIZONTALLY = 0x80000000,
-    VERTICALLY = 0x40000000,
-    DIAGONALLY = 0x20000000
+    VERTICALLY = 0x40000000
 }
