@@ -1,61 +1,57 @@
-# tmx-tiledmap 
-[![NPM Version](https://img.shields.io/npm/v/tmx-tiledmap.svg?style=flat)](https://www.npmjs.org/package/tmx-tiledmap)
-[![Build Status](https://travis-ci.org/praghus/tmx-tiledmap.svg?branch=master)](https://travis-ci.org/praghus/tmx-tiledmap)
+# tmx-map-parser
 
-Parser for [Tiled Map Editor](http://www.mapeditor.org/) *.tmx files.
+[![NPM Version](https://img.shields.io/npm/v/tmx-map-parser.svg?style=flat)](https://www.npmjs.org/package/tmx-map-parser)
+[![Build Status](https://travis-ci.org/praghus/tmx-map-parser.svg?branch=master)](https://travis-ci.org/praghus/tmx-map-parser)
+
+Parser for [Tiled Map Editor](http://www.mapeditor.org/) \*.tmx files.
 
 ## Installation
 
 ```sh
-npm install tmx-tiledmap
+npm install tmx-map-parser
 ```
 
 or using yarn
 
 ```sh
-yarn add tmx-tiledmap
+yarn add tmx-map-parser
 ```
+
 ## Usage
 
 The basic implementation:
 
 ```js
-// TMX file loaded using webpack 'url-loader' (can be either a string or URL encoded data).
-import tmxFile from '../assets/levels/map.tmx'
-import { tmx } from 'tmx-tiledmap'
+import { tmx } from 'tmx-map-parser'
+import tmxFile from 'map.tmx'
+// The *.tmx file can be loaded as string or URL encoded data.
+// for Webpack use 'url-loader' plugin, for Rollup it can be '@rollup/plugin-url'
 
-tmx(tmxFile).then((data) => {
-    console.info(data)
+const translateFlips = true // this parameter translates the tile rotation in the layer data (default false)
+
+tmx(tmxFile, translateFlips).then(data => {
+    console.log(data)
 })
-```
 
-webpack.config.js
-
-```js
-module.exports = {
-    module: {
-        rules: [
-            test: /\.tmx$/,
-            include: path.join(process.cwd(), 'src/assets/levels'),
-            use: 'url-loader'
-        ]
-    }
+// or using async/await
+async function loadMap() {
+    const data = await await tmx(tmxFile, translateFlips)
+    console.log(data)
 }
 ```
+
 ### Important
+
 Parser only supports embedded tilesets. At the moment, external tilesets are not supported!
 
-
-## Documentation
-
-Example parsed data
+## Example data
 
 ```js
 {
-    tiledversion: "1.2.4",
+    tiledversion: "1.8.0",
     tilewidth: 16,
     tileheight: 16,
-    version: 1.2,
+    version: 1.8,
     width: 512,
     height: 128,
     infinite: 0,
@@ -64,7 +60,7 @@ Example parsed data
     orientation: "orthogonal",
     renderorder: "right-down",
     properties: {
-        property1: 'value', 
+        property1: 'value',
         property2: 0.5
     },
     layers: [{
@@ -73,6 +69,7 @@ Example parsed data
         type: "layer",
         visible: 1,
         data: [0, 1, 1, 10, 10, 10, 1, 1, 0, 0, 0, 0, …],
+        // When the translateFlips parameter is enabled
         flips: [
             {H: false, V: false, D: false},
             {H: true, V: false, D: true},
@@ -84,7 +81,7 @@ Example parsed data
         opacity: 0.77,
         properties: {
            property1: 'value',
-           property2: false   
+           property2: false
         }
     }, {
         id: 2,
@@ -94,7 +91,7 @@ Example parsed data
         objects: [{…}, {…}, {…}],
         properties: {
            property1: 'value',
-           property2: false   
+           property2: false
         }
     }, {
         …
@@ -102,7 +99,7 @@ Example parsed data
     tilesets: [{
         columns: 32,
         firstgid: 1,
-        image: {source: "../images/tiles.png", width: 512, height: 512},
+        image: {source: "tiles.png", width: 512, height: 512},
         name: "tiles",
         tilecount: 1024,
         tilewidth: 16,

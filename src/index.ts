@@ -1,5 +1,3 @@
-import { TMXParser } from './lib/tmx-parser'
-export const tmx = async (xmlString: string): Promise<Record<string, any>> => {
-    const tmxParser = new TMXParser(xmlString)
-    return await tmxParser.parse()
-}
+import { TMXParser } from './tmx-parser'
+export const tmx = async (xmlString: string, translateFlips = false): Promise<Record<string, any>> =>
+    await TMXParser(xmlString, translateFlips)
