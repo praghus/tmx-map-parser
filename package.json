@@ -8,17 +8,13 @@
         "type": "git",
         "url": "https://github.com/praghus/tmx-map-parser"
     },
-    "license": "ISC",
+    "license": "MIT",
     "keywords": [
         "typescript",
-        "canvas",
-        "game",
-        "gamedev",
-        "engine",
-        "pixelart",
-        "tiled",
         "tmx",
-        "platformer"
+        "tiled",
+        "tiledmap",
+        "parser"
     ],
     "main": "dist/tmx-map-parser.cjs.js",
     "module": "dist/tmx-map-parser.esm.js",
