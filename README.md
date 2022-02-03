@@ -23,7 +23,7 @@ The basic implementation:
 ```js
 import { tmx } from 'tmx-map-parser'
 import tmxFile from 'map.tmx'
-// The *.tmx file can be loaded as string or URL encoded data.
+// The *.tmx file can be loaded as a string or URL encoded data.
 // for Webpack use 'url-loader' plugin, for Rollup it can be '@rollup/plugin-url'
 
 const translateFlips = true // Translates the tile flips in the layer data (default false)
