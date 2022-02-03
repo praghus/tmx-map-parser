@@ -1,7 +1,6 @@
 # tmx-map-parser
 
 [![NPM Version](https://img.shields.io/npm/v/tmx-map-parser.svg?style=flat)](https://www.npmjs.org/package/tmx-map-parser)
-[![Build Status](https://travis-ci.org/praghus/tmx-map-parser.svg?branch=master)](https://travis-ci.org/praghus/tmx-map-parser)
 
 Parser for [Tiled Map Editor](http://www.mapeditor.org/) \*.tmx files.
 
