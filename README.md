@@ -45,6 +45,8 @@ Parser only supports embedded tilesets. At the moment, external tilesets are not
 
 ## Example data
 
+[TMX Map Format documentation](https://doc.mapeditor.org/en/stable/reference/tmx-map-format/)
+
 ```js
 {
     tiledversion: "1.8.0",
