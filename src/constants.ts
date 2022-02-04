@@ -4,6 +4,7 @@ export enum SHAPE {
     POLYGON = 'polygon',
     RECTANGLE = 'rectangle'
 }
+
 export enum NODE_TYPE {
     EDITOR_SETTINGS = 'editorsettings',
     GROUP = 'group',
