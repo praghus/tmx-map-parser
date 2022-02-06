@@ -34,7 +34,7 @@ tmx(tmxFile, translateFlips).then(data => {
 
 // or using async/await
 async function loadMap() {
-    const data = await await tmx(tmxFile, translateFlips)
+    const data = await tmx(tmxFile, translateFlips)
     console.log(data)
 }
 ```
