@@ -20,11 +20,21 @@ export interface TMXTiledMap {
 export interface TMXLayer {
     id: number
     name: string
+    x?: number
+    y?: number
+    width: number
+    height: number
+    opacity?: number
     properties: Record<string, any> | null
     type: string
     visible: number
+    tintcolor?: string
+    offsetx?: number
+    offsety?: number
+    parallaxx?: number
+    parallaxy?: number
     data?: (number | null)[]
-    object?: TmxObject[]
+    objects?: TMXObject[]
     image?: TMXImage
 }
 
@@ -46,6 +56,7 @@ export interface TMXTileset {
     tilecount: number
     tileheight: number
     tilewidth: number
+    tiles: TMXTile[]
 }
 
 export interface TMXImage {
@@ -62,7 +73,7 @@ export interface TMXTile {
     probability?: number
 }
 
-export interface TmxObject {
+export interface TMXObject {
     gid: number
     height: number
     id: number

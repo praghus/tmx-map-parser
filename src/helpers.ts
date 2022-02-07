@@ -1,7 +1,7 @@
 import zlib from 'zlib'
 import { parseString } from 'xml2js'
 import { COMPRESSION, ENCODING, FLIPPED, NODE_TYPE, SHAPE } from './constants'
-import { TmxObject, TMXLayer, TMXFlips, TMXTile, TMXTileset, TMXLayerGroup } from './types'
+import { TMXObject, TMXLayer, TMXFlips, TMXTile, TMXTileset, TMXLayerGroup } from './types'
 
 const isValidArray = (arr: any): boolean => !!(arr && arr.length > 0)
 
@@ -85,7 +85,7 @@ const parseXMLString = async (xmlString: string): Promise<any> => {
     )
 }
 
-const parseObjectData = (data: Record<string, any>): TmxObject => {
+const parseObjectData = (data: Record<string, any>): TMXObject => {
     const { $, properties, polygon, text } = data
     const object = Object.assign(
         {
@@ -234,8 +234,8 @@ async function parseTileLayer(
     newLayer.data.map((gid: number, i: number) => {
         if (translateFlips) {
             newLayer.flips[i] = getFlips(gid)
-        }
-        newLayer.data[i] = getTileId(gid)
+            newLayer.data[i] = getTileId(gid)
+        } else newLayer.data[i] = gid
     })
     return newLayer
 }
@@ -257,4 +257,4 @@ const parseNode = async (
     return
 }
 
-export { getAttributes, parseNode, parseTileset, parseXMLString }
+export { getAttributes, getFlips, getTileId, parseNode, parseTileset, parseXMLString }
