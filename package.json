@@ -1,6 +1,6 @@
 {
     "name": "tmx-map-parser",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "description": "Tiled Map Editor *.tmx files parser",
     "author": "Piotr Praga <praghus@gmail.com>",
     "homepage": "https://github.com/praghus/tmx-map-parser",
