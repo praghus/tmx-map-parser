@@ -33,6 +33,8 @@ export interface TMXLayer {
     offsety?: number
     parallaxx?: number
     parallaxy?: number
+    repeatx?: number
+    repeaty?: number
     data?: (number | null)[]
     objects?: TMXObject[]
     image?: TMXImage
