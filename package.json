@@ -51,7 +51,7 @@
         "interface": "^1.2.1",
         "prettier": "^2.4.1",
         "rimraf": "^3.0.2",
-        "rollup": "^2.56.3",
+        "rollup": "^3.29.5",
         "ts-node": "^10.2.1",
         "tslib": "^2.3.1",
         "typedoc": "^0.21.9",
